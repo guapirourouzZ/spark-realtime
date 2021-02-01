@@ -5,7 +5,6 @@ import com.guapirourou.gmall2021.realtime.spark.util.{MyKafkaUtil, OffsetManager
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.TopicPartition
 import org.apache.spark.SparkConf
-import org.apache.spark.sql.catalyst.expressions.Second
 import org.apache.spark.streaming.dstream.{DStream, InputDStream}
 import org.apache.spark.streaming.kafka010.{HasOffsetRanges, OffsetRange}
 import org.apache.spark.streaming.{Seconds, StreamingContext}
@@ -165,9 +164,6 @@ object DauApp {
         //3 driver 执行一次
 //        OffsetManagerUtil.saveOffset(topic,groupid, offsetRanges)
         println("BBBB")
-
-
-
 
 
         ssc.start()
